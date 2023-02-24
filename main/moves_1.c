@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 20:06:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/24 02:15:32 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/02/24 09:31:59 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ void	ft_swap(t_stack **root, char opt)
 
 void	ft_ss(t_stack **root_a, t_stack **root_b)
 {
-	ft_swap(root_a, '0');
-	ft_swap(root_b, '0');
+	if (*root_a != NULL && (*root_a)->next != NULL)
+		ft_swap(root_a, '0');
+	if (*root_b != NULL && (*root_b)->next != NULL)
+		ft_swap(root_b, '0');
 	ft_printf("ss\n");
 }
 
@@ -45,14 +47,12 @@ void	ft_push(t_stack **root_a, t_stack **root_b, char opt)
 		ft_stack_push(root_a, push_val);
 		ft_stack_pop(root_b);
 		ft_printf("pa\n");
-		free(push_val);
 	}
 	else if (opt == 'b')
 	{
 		push_val = ft_stack_new((*root_a)->num);
 		ft_stack_push(root_b, push_val);
 		ft_stack_pop(root_a);
-		free(push_val);
 		ft_printf("pb\n");
 	}
 }
@@ -79,7 +79,9 @@ void	ft_rotate(t_stack **root, char opt)
 
 void	ft_rr(t_stack **root_a, t_stack **root_b)
 {
-	ft_rotate(root_a, '0');
-	ft_rotate(root_b, '0');
+	if (*root_a != NULL && (*root_a)->next != NULL)
+		ft_rotate(root_a, '0');
+	if (*root_b != NULL && (*root_b)->next != NULL)
+		ft_rotate(root_b, '0');
 	ft_printf("rr\n");
 }
