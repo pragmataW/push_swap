@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:38:53 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/01 19:49:29 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 20:20:49 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,41 @@ int	is_number(char **nums)
 	return (1);
 }
 
+int	is_larger(const char *str)
+{
+	int				i;
+	int				sign;
+	long	result;
+
+	sign = 1;
+	result = 0;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i++] == '-')
+			sign *= -1;
+	}
+	while ((ft_isdigit(str[i]) == 1) && (str[i] != '\0'))
+		result = result * 10 + (str[i++] - 48);
+	if (result > 2147483647 || result < -2147483648)
+		return (0);
+	return (1);
+}
+
 void	num_control(char **nums)
 {
+	int	i;
+
 	if (!is_duplicate(nums))
-		exit(ft_printf("Error!\nDuplicated Numbers"));
+		exit(ft_printf("Error!\nDuplicated Numbers!"));
 	if (!is_number(nums))
 		exit(ft_printf("Error!\nYour arguments are not number!"));
+	while (nums[i])
+	{
+		if (!is_larger(nums[i]))
+			exit(ft_printf("Error\nYour arguments are larger than integer!"));
+		i++;
+	}
 }
