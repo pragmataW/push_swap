@@ -6,13 +6,13 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 14:48:33 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/23 20:28:20 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 13:19:20 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_stack_pop(t_stack **root)
+int	ft_stack_pop(t_stack **root)
 {
 	t_stack	*tmp;
 

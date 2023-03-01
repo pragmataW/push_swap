@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:33:12 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/24 10:27:40 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 18:01:30 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_list
 typedef struct s_stack
 {
 	int				num;
- 	int				tag;
+	int				tag;
 	struct s_stack	*next;			
 }				t_stack;
 
@@ -57,7 +57,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *ptr, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *needle, size_t len);
-long		ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -80,6 +80,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int		ft_strcmp(const char *s1, const char *s2);
 //printf
 int		ft_putchr(char c);
 int		ft_putnbr(int nbr);

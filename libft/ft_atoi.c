@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:46:34 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/24 10:34:17 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 20:01:49 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	}
 	while ((ft_isdigit(str[i]) == 1) && (str[i] != '\0'))
 		result = result * 10 + (str[i++] - 48);
-	if (result > LONG_MAX)
+	if (result > 2147483647)
 	{
 		if (sign == -1)
 			return (0);

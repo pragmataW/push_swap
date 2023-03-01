@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:38:53 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/01 20:20:49 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 23:32:40 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	num_control(char **nums)
 {
 	int	i;
 
+	i = 1;
 	if (!is_duplicate(nums))
 		exit(ft_printf("Error!\nDuplicated Numbers!"));
 	if (!is_number(nums))
