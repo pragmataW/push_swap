@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:38:53 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/01 19:47:44 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/01 19:49:29 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	is_duplicate(char **nums)
 	int	i;
 	int	j;
 	int	control;
+
 	control = 0;
 	i = 0;
 	while (nums[i])
