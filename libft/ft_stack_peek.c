@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 20:16:27 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/23 21:10:04 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/02 15:24:30 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_stack	*ft_stack_peek(t_stack **root)
 	r_val = (t_stack *)malloc(sizeof(t_stack));
 	r_val->num = (*root)->num;
 	r_val->tag = (*root)->tag;
+	r_val->index = (*root)->index;
 	r_val->next = (*root)->next;
 	return (r_val);
 }

@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:33:12 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/01 18:01:30 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/02 15:23:18 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_stack
 {
 	int				num;
 	int				tag;
+	int				index;
 	struct s_stack	*next;			
 }				t_stack;
 
