@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:01:55 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/01 19:53:49 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/02 15:38:15 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	ft_rrr(t_stack **root_a, t_stack **root_b);
 int		is_duplicate(char **nums);
 int		is_number(char **nums);
 void	num_control(char **nums);
-
+//! Index Finder
+void	index_finder(t_stack **root);
 #endif
