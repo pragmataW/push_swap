@@ -6,38 +6,54 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:12:46 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/02 17:10:25 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/04 15:20:34 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	tag_finder(t_stack **root, int argc)
+t_stack	*find_last(t_stack **root)
 {
-	int		tag; //zaten biliyon amk
-	int		last; //bir önceki en küçük node
-	t_stack	*iter;
-	t_stack *tmp;
+	int		max;
+	t_stack	*iterator;
+	t_stack	*tmp;
 
+	iterator = *root;
 	tmp = *root;
-	iter = *root;
+	max = iterator->num;
+	while (iterator)
+	{
+		if (iterator->num > max)
+		{
+			tmp = iterator;
+			max = tmp->num;
+		}
+		iterator = iterator->next;
+	}
+	return (tmp);
+}
+
+void	tag_finder(t_stack **root, int argc)
+{	
+	t_stack	*min;
+	t_stack	*max;
+	t_stack	*iter;
+	int		tag;
+
 	tag = 1;
-	last = -2147483647;
 	while (argc > 1)
 	{
 		iter = *root;
+		max = find_last(root);
 		while (iter)
 		{
-			if ((tmp->num > iter->num) && last < iter->num )
-			{
-				tmp = iter;
-			}
+			if (iter->num < max->num && iter->tag == 0)
+				max = iter;
 			iter = iter->next;
 		}
-		last = tmp->num;
-		tmp->tag = tag;
-		argc--;
+		max->tag = tag;
 		tag++;
+		argc--;
 	}
 }
 
@@ -47,9 +63,9 @@ int main()
 	ft_stack_push(&new, ft_stack_new(41));
 	ft_stack_push(&new, ft_stack_new(361));
 	ft_stack_push(&new, ft_stack_new(9));
-	ft_stack_push(&new, ft_stack_new(2));
-	ft_stack_push(&new, ft_stack_new(88));
 	ft_stack_push(&new, ft_stack_new(99));
+	ft_stack_push(&new, ft_stack_new(88));
+	ft_stack_push(&new, ft_stack_new(2));
 
 	//!
 	tag_finder(&new, 7);
