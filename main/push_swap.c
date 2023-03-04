@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/02 15:36:59 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/04 16:14:05 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,17 @@ void	init(t_stack **stack, char **args)
 	}
 }
 
-// int	main(int argc, char **argv)
-// {
-// 	t_stack	*a;
-// 	t_stack	*b;
+int	main(int argc, char **argv)
+{
+	t_stack	*a;
+	t_stack	*b;
 
-// 	a = NULL;
-// 	b = NULL;
-// 	if (argc < 2)
-// 		exit(ft_printf("Error\ntoo few arguments!"));
-// 	num_control(argv);
-// 	init(&a, argv);
-// }
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		exit(ft_printf("Error\ntoo few arguments!"));
+	num_control(argv);
+	init(&a, argv);
+	tag_finder(&a, argc);
+	index_finder(&a);
+}

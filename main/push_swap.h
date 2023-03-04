@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:01:55 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/02 15:38:15 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/04 16:10:33 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,7 @@ int		is_number(char **nums);
 void	num_control(char **nums);
 //! Index Finder
 void	index_finder(t_stack **root);
+//! Tag Finder
+t_stack	*find_last(t_stack **root);
+void	tag_finder(t_stack **root, int argc);
 #endif
