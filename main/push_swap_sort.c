@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 20:16:06 by yciftci          ###   ########.fr       */
+/*   Created: 2023/03/04 18:43:13 by yciftci           #+#    #+#             */
+/*   Updated: 2023/03/04 19:32:23 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init(t_stack **stack, char **args)
+void	push_swap_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	int		i;
-
-	i = 1;
-	while (args[i])
-	{
-		ft_stack_push(stack, ft_stack_new(ft_atoi(args[i]), 0, 0));
-		i++;
-	}
+	
 }
 
-
-int	main(int argc, char **argv)
-{
-	t_stack	*a;
-	t_stack	*b;
-
-	a = NULL;
-	b = NULL;
-	if (argc < 2)
-		exit(ft_printf("Error\ntoo few arguments!"));
-	num_control(argv);
-	init(&a, argv);
-	tag_finder(&a, 3);
-	index_finder(&a);
-}
+//int	main(void)
+//{
+//	return (0);
+//}

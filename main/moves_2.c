@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 02:15:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/02/24 09:07:36 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/04 19:52:23 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_r_rotate(t_stack **root, char opt)
 	tail = *root;
 	while (tail->next->next != NULL)
 		tail = tail->next;
-	rt_val = ft_stack_new(tail->next->num);
+	rt_val = ft_stack_new(tail->next->num, tail->next->tag, tail->next->index);
 	free(tail->next);
 	tail->next = NULL;
 	ft_stack_push(root, rt_val);

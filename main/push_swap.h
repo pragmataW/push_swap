@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:01:55 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 16:10:33 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/04 20:15:32 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,7 @@ void	index_finder(t_stack **root);
 //! Tag Finder
 t_stack	*find_last(t_stack **root);
 void	tag_finder(t_stack **root, int argc);
+//! Push Swap Sort Utils
+void	ft_three(t_stack **root);
+void	ft_two(t_stack **root);
 #endif
