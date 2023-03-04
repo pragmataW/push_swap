@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 20:06:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 20:00:41 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 01:01:13 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_swap(t_stack **root, char opt)
 		ft_printf("sa\n");
 	else if (opt == 'b')
 		ft_printf("sb\n");
+	index_finder(root);
 }
 
 void	ft_ss(t_stack **root_a, t_stack **root_b)
@@ -35,6 +36,8 @@ void	ft_ss(t_stack **root_a, t_stack **root_b)
 	if (*root_b != NULL && (*root_b)->next != NULL)
 		ft_swap(root_b, '0');
 	ft_printf("ss\n");
+	index_finder(root_a);
+	index_finder(root_b);
 }
 
 void	ft_push(t_stack **a, t_stack **b, char opt)
@@ -55,6 +58,8 @@ void	ft_push(t_stack **a, t_stack **b, char opt)
 		ft_stack_pop(a);
 		ft_printf("pb\n");
 	}
+	index_finder(a);
+	index_finder(b);
 }
 
 void	ft_rotate(t_stack **root, char opt)
@@ -75,6 +80,7 @@ void	ft_rotate(t_stack **root, char opt)
 		ft_printf("ra\n");
 	else if (opt == 'b')
 		ft_printf("rb\n");
+	index_finder(root);
 }
 
 void	ft_rr(t_stack **root_a, t_stack **root_b)
@@ -84,4 +90,6 @@ void	ft_rr(t_stack **root_a, t_stack **root_b)
 	if (*root_b != NULL && (*root_b)->next != NULL)
 		ft_rotate(root_b, '0');
 	ft_printf("rr\n");
+	index_finder(root_a);
+	index_finder(root_b);
 }

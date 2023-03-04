@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 20:11:25 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 21:36:31 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 00:11:46 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,19 @@ int	is_sorted(t_stack **root)
 		i++;
 	}
 	return (1);
+}
+
+int	lst_size(t_stack **root)
+{
+	int		i;
+	t_stack	*iter;
+
+	i = 0;
+	iter = *root;
+	while (iter)
+	{
+		i++;
+		iter = iter->next;
+	}
+	return (i);
 }

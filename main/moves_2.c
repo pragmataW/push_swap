@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 02:15:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 19:52:23 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 01:01:38 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_r_rotate(t_stack **root, char opt)
 		ft_printf("rra\n");
 	else if (opt == 'b')
 		ft_printf("rrb\n");
+	index_finder(root);
 }
 
 void	ft_rrr(t_stack **root_a, t_stack **root_b)
@@ -40,4 +41,6 @@ void	ft_rrr(t_stack **root_a, t_stack **root_b)
 	if (*root_b != NULL && (*root_b)->next != NULL)
 		ft_r_rotate(root_b, '0');
 	ft_printf("rrr\n");
+	index_finder(root_a);
+	index_finder(root_b);
 }

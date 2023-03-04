@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:25:39 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/02 16:13:34 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 01:12:00 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	index_finder(t_stack **root)
 	int			i;
 	t_stack		*tmp;
 
-	i = 0;
+	i = 1;
 	tmp = *root;
 	while (tmp)
 	{
