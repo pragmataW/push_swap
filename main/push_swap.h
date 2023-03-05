@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:01:55 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/05 00:56:29 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 09:19:51 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ void	index_finder(t_stack **root);
 t_stack	*find_last(t_stack **root);
 void	tag_finder(t_stack **root, int argc);
 //! Push Swap Sort Utils
-void	ft_three(t_stack **root);
-void	ft_two(t_stack **root);
+void	ft_three(t_stack **root, int argc);
 int		is_sorted(t_stack **root);
 int		lst_size(t_stack **root);
 //! Push swap sort

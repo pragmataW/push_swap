@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 02:15:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/05 01:01:38 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 09:02:22 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_r_rotate(t_stack **root, char opt)
 	free(tail->next);
 	tail->next = NULL;
 	ft_stack_push(root, rt_val);
-	free(rt_val);
 	if (opt == 'a')
 		ft_printf("rra\n");
 	else if (opt == 'b')

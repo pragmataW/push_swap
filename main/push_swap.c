@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/05 08:02:56 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 10:02:46 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	init(t_stack **stack, char **args)
 	}
 }
 
-
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -32,18 +31,14 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-
-	ft_stack_push(&a, ft_stack_new(31, 0, 0));
-	ft_stack_push(&a, ft_stack_new(1, 0, 0));
-	ft_stack_push(&a, ft_stack_new(8, 0, 0));
-	ft_stack_push(&a, ft_stack_new(41, 0, 0));
-	ft_stack_push(&a, ft_stack_new(3, 0, 0));
-
-	//if (argc < 2)
-	//	exit(ft_printf("Error\ntoo few arguments!"));
-	//num_control(argv);
-	//init(&a, argv);
-	tag_finder(&a, 6);
+	if (argc < 2)
+		exit(ft_printf("Error\ntoo few arguments!"));
+	num_control(argv);
+	init(&a, argv);
+	tag_finder(&a, argc);
 	index_finder(&a);
-	push_swap_sort(&a, &b, 6);
+	push_swap_sort(&a, &b, argc);
 }
+
+//Ardışıksa swap yap muhabbetine tekrar bak
+//integer max-min kontrolü

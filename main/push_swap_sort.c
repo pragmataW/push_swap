@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:43:13 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/05 07:58:02 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 10:02:54 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	rotater(t_stack **root, int index, char opt)
 	loop = index - 1;
 	if (opt == 'r')
 	{
-		while (loop > 0)
+		while (loop)
 		{
 			ft_rotate(root, 'a');
 			loop--;
@@ -43,23 +43,23 @@ void	rotater(t_stack **root, int index, char opt)
 	}
 	else if (opt == 'R')
 	{
-		while (reverse_loop > 0)
+		while (reverse_loop)
 		{
 			ft_r_rotate(root, 'a');
 			reverse_loop--;
 		}
 	}
-	if ((*root)->tag - 1 == (*root)->next->tag)
-		ft_swap(root, 'a');
 }
 
 void	push_swap_sort(t_stack **stack_a, t_stack **stack_b, int argc)
 {
 	int		median;
 	int		tag;
+	int		argc_tmp;
 	t_stack	*min;
 
 	median = lst_size(stack_a) / 2;
+	argc_tmp = argc;
 	tag = 1;
 	while (argc > 4)
 	{
@@ -72,5 +72,7 @@ void	push_swap_sort(t_stack **stack_a, t_stack **stack_b, int argc)
 		tag++;
 		argc--;
 	}
-	ft_three(stack_a);
+	ft_three(stack_a, argc_tmp);
+	while (*stack_b)
+		ft_push(stack_a, stack_b, 'a');
 }
