@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 20:06:01 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/05 01:01:13 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 08:02:38 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,17 @@ void	ft_push(t_stack **a, t_stack **b, char opt)
 {
 	t_stack	*push_val;
 
+	push_val = NULL;
 	if (opt == 'a')
 	{
-		push_val = ft_stack_new((*a)->num, (*a)->tag, (*a)->index);
+		push_val = ft_stack_new((*b)->num, (*b)->tag, (*b)->index);
 		ft_stack_push(a, push_val);
 		ft_stack_pop(b);
 		ft_printf("pa\n");
 	}
 	else if (opt == 'b')
 	{
-		push_val = ft_stack_new((*b)->num, (*b)->tag, (*b)->index);
+		push_val = ft_stack_new((*a)->num, (*a)->tag, (*a)->index);
 		ft_stack_push(b, push_val);
 		ft_stack_pop(a);
 		ft_printf("pb\n");
