@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:38:53 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 18:39:03 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/05 15:05:32 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	num_control(char **nums)
 	while (nums[i])
 	{
 		if (!is_larger(nums[i]))
-			exit(ft_printf("Error\nYour arguments are larger than integer!"));
+			exit(ft_printf("Error\nYour arguments are larger or smaller than integer!"));
 		i++;
 	}
 }
