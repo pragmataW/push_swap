@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 20:11:25 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 09:48:52 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/17 14:51:02 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,22 @@ void	ft_three(t_stack **root, int argc)
 
 	tmp = *root;
 	argc--;
-	if (tmp->tag == 1 && tmp->next->tag == 3)
-	{
-		ft_r_rotate(root, 'a');
-		ft_swap(root, 'a');
-	}
-	else if (tmp->tag == 2 && tmp->next->tag == 1)
-		ft_swap(root, 'a');
-	else if (tmp->tag == 2 && tmp->next->tag == 3)
-		ft_r_rotate(root, 'a');
-	else if (tmp->tag == 3 && tmp->next->tag == 2)
+	if (tmp->tag == argc - 2 && tmp->next->tag == argc)
 	{
 		ft_swap(root, 'a');
-		ft_r_rotate(root, 'a');
-	}
-	else if (tmp->tag == 3 && tmp->next->tag == 1)
 		ft_rotate(root, 'a');
+	}
+	else if (tmp->tag == argc - 1 && tmp->next->tag == argc - 2)
+		ft_swap(root, 'a');
+	else if (tmp->tag == argc - 1 && tmp->next->tag == argc)
+		ft_r_rotate(root, 'a');
+	else if (tmp->tag == argc && tmp->next->tag == argc - 2)
+		ft_rotate(root, 'a');
+	else if (tmp->tag == argc && tmp->next->tag == argc - 1)
+	{
+		ft_rotate(root, 'a');
+		ft_swap(root, 'a');
+	}
 }
 
 void	ft_two(t_stack **root)

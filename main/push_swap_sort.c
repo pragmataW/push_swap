@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:43:13 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 10:14:15 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/17 14:51:34 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,16 @@ void	rotater(t_stack **root, int index, char opt)
 	}
 }
 
-// we gave tag + 3 because while we push to be we left 3 element in a stack
-
 void	push_swap_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		median;
 	int		tag;
+	int		a_size;
 	t_stack	*max;
 
+	a_size = lst_size(stack_a);
 	median = lst_size(stack_b) / 2;
-	tag = lst_size(stack_b) + 3;
+	tag = lst_size(stack_b);
 	while (*stack_b)
 	{
 		max = max_finder(stack_b, tag);
@@ -71,7 +71,4 @@ void	push_swap_sort(t_stack **stack_a, t_stack **stack_b)
 		ft_push(stack_a, stack_b, 'a');
 		tag--;
 	}
-	ft_r_rotate(stack_a, 'a');
-	ft_r_rotate(stack_a, 'a');
-	ft_r_rotate(stack_a, 'a');
 }
