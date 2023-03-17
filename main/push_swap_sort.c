@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:43:13 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 01:10:52 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/17 10:14:15 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	rotater(t_stack **root, int index, char opt)
 	{
 		while (loop)
 		{
-			ft_rotate(root, 'a');
+			ft_rotate(root, 'b');
 			loop--;
 		}
 	}
@@ -45,34 +45,33 @@ void	rotater(t_stack **root, int index, char opt)
 	{
 		while (reverse_loop)
 		{
-			ft_r_rotate(root, 'a');
+			ft_r_rotate(root, 'b');
 			reverse_loop--;
 		}
 	}
 }
 
-void	push_swap_sort(t_stack **stack_a, t_stack **stack_b, int argc)
+// we gave tag + 3 because while we push to be we left 3 element in a stack
+
+void	push_swap_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		median;
 	int		tag;
-	int		argc_tmp;
-	t_stack	*min;
+	t_stack	*max;
 
-	median = lst_size(stack_a) / 2;
-	argc_tmp = argc;
-	tag = lst_size(stack_a);
-	while (argc > 3)
-	{
-		min = max_finder(stack_a, tag);
-		if (min->index <= median)
-			rotater(stack_a, min->index, 'r');
-		else
-			rotater(stack_a, min->index, 'R');
-		ft_push(stack_a, stack_b, 'b');
-		tag--;
-		argc--;
-	}
-	ft_three(stack_a, argc_tmp);
+	median = lst_size(stack_b) / 2;
+	tag = lst_size(stack_b) + 3;
 	while (*stack_b)
+	{
+		max = max_finder(stack_b, tag);
+		if (max->index <= median)
+			rotater(stack_b, max->index, 'r');
+		else
+			rotater(stack_b, max->index, 'R');
 		ft_push(stack_a, stack_b, 'a');
+		tag--;
+	}
+	ft_r_rotate(stack_a, 'a');
+	ft_r_rotate(stack_a, 'a');
+	ft_r_rotate(stack_a, 'a');
 }
