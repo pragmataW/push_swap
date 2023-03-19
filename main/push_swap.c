@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/19 07:19:43 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 07:23:36 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	main(int argc, char **argv)
 	init(&a, &b, argv);
 	tag_finder(&a, argc);
 	index_finder(&a);
+	if (is_sorted(&a))
+		exit(0);
 	if (argc < 80)
 		push_swap_sort(&a, &b);
 	else
