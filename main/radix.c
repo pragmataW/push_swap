@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 04:03:50 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/19 04:38:05 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 05:07:56 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	radix(t_stack **stack_a, t_stack **stack_b)
 
 	base = base_counter(lst_size(stack_a));
 	wise = 0;
-	while (base)
+	while (base--)
 	{
 		size = lst_size(stack_a);
 		while (size)
@@ -51,6 +51,5 @@ void	radix(t_stack **stack_a, t_stack **stack_b)
 			size--;
 		}
 		wise++;
-		base--;
 	}
 }

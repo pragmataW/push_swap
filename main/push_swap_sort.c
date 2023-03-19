@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:43:13 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 14:51:34 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 05:41:25 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	rotater(t_stack **root, int index, char opt)
 	{
 		while (loop)
 		{
-			ft_rotate(root, 'b');
+			ft_rotate(root, 'a');
 			loop--;
 		}
 	}
@@ -45,7 +45,7 @@ void	rotater(t_stack **root, int index, char opt)
 	{
 		while (reverse_loop)
 		{
-			ft_r_rotate(root, 'b');
+			ft_r_rotate(root, 'a');
 			reverse_loop--;
 		}
 	}
@@ -59,16 +59,22 @@ void	push_swap_sort(t_stack **stack_a, t_stack **stack_b)
 	t_stack	*max;
 
 	a_size = lst_size(stack_a);
-	median = lst_size(stack_b) / 2;
-	tag = lst_size(stack_b);
-	while (*stack_b)
+	median = lst_size(stack_a) / 2;
+	tag = 1;
+	while (lst_size(stack_a) > 3)
 	{
-		max = max_finder(stack_b, tag);
+		max = max_finder(stack_a, tag);
 		if (max->index <= median)
-			rotater(stack_b, max->index, 'r');
+			rotater(stack_a, max->index, 'r');
 		else
-			rotater(stack_b, max->index, 'R');
-		ft_push(stack_a, stack_b, 'a');
-		tag--;
+			rotater(stack_a, max->index, 'R');
+		ft_push(stack_a, stack_b, 'b');
+		tag++;
 	}
+	if (lst_size(stack_a) == 3)
+		ft_three(stack_a, a_size);
+	else if (lst_size(stack_a) == 2)
+		ft_two(stack_a);
+	while (*stack_b)
+		ft_push(stack_a, stack_b, 'a');
 }

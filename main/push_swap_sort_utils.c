@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 20:11:25 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 14:51:02 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 05:41:47 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_three(t_stack **root, int argc)
 	t_stack	*tmp;
 
 	tmp = *root;
-	argc--;
 	if (tmp->tag == argc - 2 && tmp->next->tag == argc)
 	{
 		ft_swap(root, 'a');
