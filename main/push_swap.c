@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/19 07:17:41 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 07:19:43 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc < 2)
-		exit(ft_printf("Error\ntoo few arguments!"));
+		exit(0);
 	num_control(argv);
 	init(&a, &b, argv);
 	tag_finder(&a, argc);
