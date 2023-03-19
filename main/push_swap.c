@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/17 14:42:07 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 04:41:13 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ int	main(int argc, char **argv)
 	init(&a, argv);
 	tag_finder(&a, argc);
 	index_finder(&a);
-	push_to_b(&a, &b, argc);
-	push_swap_sort(&a, &b);
+	//push_to_b(&a, &b, argc);
+	//push_swap_sort(&a, &b);
 
+	radix(&a, &b);
 	//t_stack *i = a;
 	//ft_printf("--A--\n");
 	//while (i)
