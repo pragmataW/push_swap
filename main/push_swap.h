@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:01:55 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/19 05:40:25 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 05:49:07 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	rotater(t_stack **root, int index, char opt);
 t_stack	*max_finder(t_stack **root, int tag);
 //! push to b
 void	push_to_b(t_stack **a, t_stack **b, int argc);
-
 //! RADİX
 void	radix(t_stack **stack_a, t_stack **stack_b);
 #endif

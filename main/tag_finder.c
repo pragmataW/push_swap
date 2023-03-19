@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:12:46 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/04 23:58:14 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 06:04:18 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ t_stack	*find_last(t_stack **root)
 }
 
 void	tag_finder(t_stack **root, int argc)
-{	
-	t_stack	*min;
+{
 	t_stack	*max;
 	t_stack	*iter;
 	int		tag;

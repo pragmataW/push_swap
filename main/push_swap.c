@@ -6,7 +6,7 @@
 /*   By: yciftci <yciftci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:50:15 by yciftci           #+#    #+#             */
-/*   Updated: 2023/03/19 05:37:36 by yciftci          ###   ########.fr       */
+/*   Updated: 2023/03/19 05:46:12 by yciftci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,4 @@ int	main(int argc, char **argv)
 		push_swap_sort(&a, &b);
 	else
 		radix(&a, &b);
-
-	t_stack *i = a;
-	ft_printf("--A--\n");
-	while (i)
-	{
-		ft_printf("%d\n", i->num);
-		i = i->next;
-	}
-	ft_printf("--B--\n");
-	i = b;
-	while (i)
-	{
-		ft_printf("%d\n", i->num);
-		i = i->next;
-	}
 }
